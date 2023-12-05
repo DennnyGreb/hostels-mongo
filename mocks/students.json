@@ -1,0 +1,56 @@
+[
+  {
+    "name": "John Doe",
+    "rollNumber": "A101",
+    "contact": "123-456-7890",
+    "email": "john@example.com",
+    "birthdate": "1995-01-15",
+    "checkInDate": "2023-01-01",
+    "checkOutDate": null
+  },
+  {
+    "name": "Jane Smith",
+    "rollNumber": "A102",
+    "contact": "987-654-3210",
+    "email": "jane@example.com",
+    "birthdate": "1996-03-20",
+    "checkInDate": "2023-01-15",
+    "checkOutDate": null
+  },
+  {
+    "name": "Bob Johnson",
+    "rollNumber": "A103",
+    "contact": "555-555-5555",
+    "email": "bob@example.com",
+    "birthdate": "1994-08-10",
+    "checkInDate": "2023-02-01",
+    "checkOutDate": null
+  },
+  {
+    "name": "Steve Li",
+    "rollNumber": "A104",
+    "contact": "555-555-5555",
+    "email": "bob@example.com",
+    "birthdate": "1994-08-10",
+    "checkInDate": "2023-02-01",
+    "checkOutDate": null
+  },
+  {
+    "name": "Rob Johnson",
+    "rollNumber": "A105",
+    "contact": "555-555-5555",
+    "email": "bob@example.com",
+    "birthdate": "1994-08-10",
+    "checkInDate": "2023-02-01",
+    "checkOutDate": null
+  },
+  {
+    "name": "Jim Johnson",
+    "rollNumber": "A106",
+    "contact": "555-555-5555",
+    "email": "bob@example.com",
+    "birthdate": "1994-08-10",
+    "checkInDate": "2023-02-01",
+    "checkOutDate": null
+  }
+]

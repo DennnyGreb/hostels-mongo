@@ -1,95 +1,56 @@
 import Image from 'next/image'
-import styles from './page.module.css'
+import styles from './page.module.scss'
 
-export default function Home() {
+async function populateDataAndGetHostels() {
+  const res = await fetch('http://localhost:3000/api')
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data')
+  }
+
+  return res.json()
+}
+
+export default async function Home() {
+  const data = await populateDataAndGetHostels();
+
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+      <h1 className={styles.mainHeader}>Hostels</h1>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        <ul className={styles.hostels}>
+          { data?.body?.map(hostel => {
+            console.log(hostel);
+            const { name, address, rooms } = hostel;
+            return (
+                <li key={name}>
+                  <h2>{name}</h2>
+                  <p>{address}</p>
+                  <ul>
+                    { rooms?.map(room => {
+                      const { number, students } = room;
+                      return (
+                          <li key={number}>
+                            <h3>{number}</h3>
+                            <ul>
+                              { students?.map(student => {
+                                const { name, rollNumber } = student;
+                                return (
+                                    <li key={rollNumber}>
+                                      <h4>{name}</h4>
+                                      <p>{rollNumber}</p>
+                                    </li>
+                                );
+                              })}
+                            </ul>
+                          </li>
+                      );
+                    })}
+                  </ul>
+                </li>
+            );
+          })}
+        </ul>
     </main>
   )
 }

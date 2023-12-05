@@ -1,0 +1,46 @@
+[
+  {
+    "number": 101,
+    "capacity": 4,
+    "currentOccupancy": 2,
+    "students": [
+      {
+        "rollNumber": "A101"
+      },
+      {
+        "rollNumber": "A102"
+      }
+    ]
+  },
+  {
+    "number": 102,
+    "capacity": 3,
+    "currentOccupancy": 1,
+    "students": [
+      {
+        "rollNumber": "A103"
+      }
+    ]
+  },
+  {
+    "number": 201,
+    "capacity": 5,
+    "students": [
+      {
+        "rollNumber": "A104"
+      }
+    ]
+  },
+  {
+    "number": 202,
+    "capacity": 2,
+    "students": [
+      {
+        "rollNumber": "A105"
+      },
+      {
+        "rollNumber": "A106"
+      }
+    ]
+  }
+]

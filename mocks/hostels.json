@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Hostel A",
+    "address": "123 Main Street",
+    "rooms": [
+      {
+        "number": 101
+      },
+      {
+        "number": 102
+      }
+    ],
+    "facilities": ["Wi-Fi", "Laundry", "Common Room"]
+  },
+  {
+    "name": "Hostel B",
+    "address": "456 Oak Street",
+    "rooms": [
+      {
+        "number": 201
+      },
+      {
+        "number": 202
+      }
+    ],
+    "facilities": ["Wi-Fi", "Gym", "Cafeteria"]
+  }
+]
