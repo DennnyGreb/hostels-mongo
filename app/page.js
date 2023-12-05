@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import styles from './page.module.scss'
+import AddComponent from "@/components/AddComponent";
 
 async function populateDataAndGetHostels() {
   const res = await fetch('http://localhost:3000/api')
@@ -17,8 +17,8 @@ export default async function Home() {
   return (
     <main className={styles.main}>
       <h1 className={styles.mainHeader}>Hostels</h1>
-
-        <ul className={styles.hostels}>
+        <AddComponent />
+      <ul className={styles.hostels}>
           { data?.body?.map(hostel => {
             console.log(hostel);
             const { name, address, rooms } = hostel;
