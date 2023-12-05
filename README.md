@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
@@ -16,21 +14,70 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+That project implements a simple CRUD with NextJS and MongoDB.
+DB Schema looks like that:
+```js
+{
+  "hostels": [
+    {
+      "_id": ObjectId("hostel1"),
+      "name": "Hostel A",
+      "address": "123 Main Street",
+      "rooms": [
+        {
+          "_id": ObjectId("room1"),
+          "number": 101,
+          "capacity": 4,
+          "students": [
+            {
+              "_id": ObjectId("student1"),
+              "name": "John Doe",
+              "rollNumber": "A101",
+              "contact": "123-456-7890",
+              "email": "john@example.com",
+              "birthdate": ISODate("1995-01-15"),
+              "checkInDate": ISODate("2023-01-01"),
+              "checkOutDate": null  // Will be null until the student checks out
+            },
+            {
+              "_id": ObjectId("student2"),
+              "name": "Jane Smith",
+              "rollNumber": "A102",
+              "contact": "987-654-3210",
+              "email": "jane@example.com",
+              "birthdate": ISODate("1996-03-20"),
+              "checkInDate": ISODate("2023-01-15"),
+              "checkOutDate": null
+            }
+          ]
+        },
+        {
+          "_id": ObjectId("room2"),
+          "number": 102,
+          "capacity": 3,
+          "students": [
+            {
+              "_id": ObjectId("student3"),
+              "name": "Bob Johnson",
+              "rollNumber": "A103",
+              "contact": "555-555-5555",
+              "email": "bob@example.com",
+              "birthdate": ISODate("1994-08-10"),
+              "checkInDate": ISODate("2023-02-01"),
+              "checkOutDate": null
+            }
+          ]
+        }
+      ],
+      "facilities": ["Wi-Fi", "Laundry", "Common Room"]
+    },
+    {
+      "_id": ObjectId("hostel2"),
+      "name": "Hostel B",
+      "address": "456 Oak Street",
+      "rooms": [...],  // Similar structure as above
+      "facilities": ["Wi-Fi", "Gym", "Cafeteria"]
+    }
+  ]
+}
+```
