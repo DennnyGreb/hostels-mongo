@@ -81,3 +81,7 @@ DB Schema looks like that:
   ]
 }
 ```
+Here is the screenshots of the Atlas usage:
+![Screenshot 2023-12-05 at 16.59.29.png](..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2F41%2Flz5rhc8j5nnft34l9wcnn6040000gp%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_0w9YBg%2FScreenshot%202023-12-05%20at%2016.59.29.png)
+![Screenshot 2023-12-05 at 17.00.19.png](..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2F41%2Flz5rhc8j5nnft34l9wcnn6040000gp%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_h6sWli%2FScreenshot%202023-12-05%20at%2017.00.19.png)![Screenshot 2023-12-05 at 17.00.29.png](..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2F41%2Flz5rhc8j5nnft34l9wcnn6040000gp%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_LAarO5%2FScreenshot%202023-12-05%20at%2017.00.29.png)
+![Screenshot 2023-12-05 at 17.00.37.png](..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2F41%2Flz5rhc8j5nnft34l9wcnn6040000gp%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_DVHVbG%2FScreenshot%202023-12-05%20at%2017.00.37.png)
